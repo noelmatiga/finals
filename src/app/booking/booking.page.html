@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Book Your Flight</ion-title>
+    <ion-icon name="close" slot="end" size="large"  (click)="dismis()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  <ion-card-content>
+    <ion-title></ion-title>
+    <ion-item>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label position="floating">Passenger Name</ion-label>
+      <ion-input [(ngModel)]="passName" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="airplane-outline" slot="start"></ion-icon>
+      <ion-label>Flights</ion-label>
+      <span>{{passflight}}</span>
+    </ion-item>
+    <ion-item>
+      <ion-chip *ngFor="let plane of flights; let i = index" (click)="selectedFlight(i)">
+        <ion-label>{{plane}}</ion-label>
+      </ion-chip>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Flight Type</ion-label>
+      <ion-select [(ngModel)]="passtravType">
+        <ion-select-option value="Economy">Economy</ion-select-option>
+        <ion-select-option value="Business">Business</ion-select-option>
+        <ion-select-option value="First Class">First Class</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>From</ion-label>
+      <ion-select [(ngModel)]="passfrom">
+        <ion-select-option value="Manila">Manila</ion-select-option>
+        <ion-select-option value="Cebu">Cebu</ion-select-option>
+        <ion-select-option value="Davao">Davao</ion-select-option>
+        <ion-select-option value="Tacloban Leyte">Tacloban Leyte</ion-select-option>
+        <ion-select-option value="Palawan">Palawan</ion-select-option>
+        <ion-select-option value="Boracay">Boracay</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-select [(ngModel)]="passto">
+        <ion-select-option value="Manila">Manila</ion-select-option>
+        <ion-select-option value="Cebu">Cebu</ion-select-option>
+        <ion-select-option value="Davao">Davao</ion-select-option>
+        <ion-select-option value="Tacloban Leyte">Tacloban Leyte</ion-select-option>
+        <ion-select-option value="Palawan">Palawan</ion-select-option>
+        <ion-select-option value="Boracay">Boracay</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label>Departure</ion-label>
+      <ion-datetime [(ngModel)]="passdeparture" displayFormat="D MMM YYYY H:mm"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-label>Arrival</ion-label>
+      <ion-datetime [(ngModel)]="passarrival" displayFormat="D MMM YYYY H:mm"></ion-datetime>
+    </ion-item>
+
+    <br/>
+
+    <ion-button class="ion-margin" expand="block" color="primary" (click)="saveFlight()">Book Flight</ion-button>
+      
+  </ion-card-content>
+</ion-card>
+</ion-content>

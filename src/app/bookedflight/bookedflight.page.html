@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item Lines="none">
+      <ion-label style="font-weight: 800px;font-size: 3em;">
+      </ion-label>
+      </ion-item>
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/admin']">Admin</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/bookedflight']">Book Flight</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/user']">Users</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/loginscreen']">Log Out</ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/bookedflight']">All</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>Monday</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>Tuesday</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>Wednesday</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>Thursday</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button>Friday</ion-button>
+    </ion-buttons>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button style="width: 200px; text-align: center;">Departure</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button style="width: 200px; text-align: center;">Arrival</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button style="width: 200px; text-align: center;">From</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button style="width: 200px; text-align: center;">To</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button style="width: 200px; text-align: center;">Type of Airline</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button style="width: 150px; text-align: center;">Price</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button style="width: 150px; text-align: center;">Status</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar *ngFor="let pass of AirlineBooking" style="border-bottom: 1px solid #cccccc;">
+      <ion-buttons slot="start">
+        <ion-label style="width: 200px; text-align: center;">{{pass.value.name}}</ion-label>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-label style="width: 200px; text-align: center;">{{pass.value.depart | date:'fullDate'}}</ion-label>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        &nbsp;&nbsp;
+        <ion-label style="width: 200px; text-align: center;">{{pass.value.arrive | date:'fullDate'}}</ion-label>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        &nbsp;&nbsp;&nbsp;
+        <ion-label style="width: 200px; text-align: center;">{{pass.value.from}}</ion-label>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        &nbsp;
+        <ion-label style="width: 200px; text-align: center;">{{pass.value.to}}</ion-label>
+      </ion-buttons>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ion-button color="danger">Paid</ion-button><br>
+    </ion-toolbar>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item Lines="none">
+        <ion-label style="font-weight: 800px;font-size: 3em; ">
+        Flight Schedule
+      <p style="font-weight: 400px;color: #433465;">{{today | date:'fullDate'}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let pass of AirlineBooking" style="width:620px; margin-left: 400px; ">
+    <ion-card-header>
+      <ion-label style="font-weight: 800px;font-size: 2em; margin-left: 180px; color:black;">
+        Carigara Airlines
+      </ion-label><ion-avatar style="margin-left: 300px; margin-top: 50px; height: 200px; width: 200px;position: absolute; ">
+        <img src="assets/images/plane.png">
+      </ion-avatar>
+      <ion-card-content>
+        <ion-label>Name: {{pass.value.name}}</ion-label>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-label>Flights: {{pass.value.plane}}</ion-label>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-label>Travel Type: {{pass.value.travel}}</ion-label>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-label>From: {{pass.value.from}}</ion-label>  
+      </ion-card-content>
+      <ion-card-content> 
+        <ion-label>To: {{pass.value.to}}</ion-label>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-label>Departure: {{pass.value.depart | date:'fullDate'}}</ion-label>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-label>Arrival: {{pass.value.arrive | date:'fullDate'}}</ion-label>
+      </ion-card-content>
+</ion-card-header>
+<ion-row>
+  <ion-item style="margin-left:80px;">
+    <ion-icon name="share-outline"></ion-icon>
+    <P>Share</P>
+  </ion-item>
+  <ion-item button (click)="update(pass)" style="margin-left:50px;">
+    <ion-icon name="checkmark-done-outline"></ion-icon>
+    <P>Update</P>
+  </ion-item>
+  <ion-item button (click)="deleteFlight(pass.key)" style="margin-left:50px;">
+    <ion-icon name="trash-outline"></ion-icon>
+    <P>Cancel</P>
+  </ion-item>
+</ion-row>
+<ion-item>
+  <p style="font-weight: 800px;color: #433465; font-size: 10px; font-weight: bold;">Carigara</p>
+  &nbsp;
+  <p style="font-weight: 800px;color: #433465; font-size: 10px; font-weight: bold;">Air</p>
+  &nbsp;
+  <p style="font-weight: 800px;color: #433465; font-size: 10px; font-weight: bold;">Inc.</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p style="font-weight: 800px;color: #433465; font-size: 10px;">{{today | date:'fullDate'}}</p>
+</ion-item>
+  </ion-card>
+
+  <ion-fab vertical="buttom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addFlight()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

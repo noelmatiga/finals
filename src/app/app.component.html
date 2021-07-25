@@ -1,3 +1,42 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-avatar style="margin-left: 90px; margin-top: 10px; height: 125px; width: 125px; ">
+          <img src="assets/images/plane.png">
+        </ion-avatar>
+          <span class="title">Carigara Airline</span>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="home">
+            <ion-icon name="home-outline"></ion-icon>
+            &nbsp;<ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="flights">
+            <ion-icon name="calendar-outline"></ion-icon>
+            &nbsp;<ion-label>Flights Schedule</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="adminlog">
+            <ion-icon name="person-circle-outline"></ion-icon>
+            &nbsp;<ion-label>Admin</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+         <ion-menu-toggle>
+        <ion-item routerLink="">
+          <ion-icon name="arrow-back"></ion-icon>
+          &nbsp;<ion-label (click)="logout">Log Out</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
+

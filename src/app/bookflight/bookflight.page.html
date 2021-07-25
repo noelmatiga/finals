@@ -1,0 +1,119 @@
+<ion-content>
+  <div class="header">
+    <header>
+      <div id="h1"><b>AV</b>ION<ion-icon name="airplane"></ion-icon></div>
+      <nav>
+        <ion-buttons>
+         <ion-button [routerLink]="['/home']">Home</ion-button>
+       </ion-buttons>
+       <ion-buttons>
+         <ion-button [routerLink]="['/receipt']">Flight Receipt</ion-button>
+       </ion-buttons>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;
+       <ion-buttons>
+         <ion-button [routerLink]="['/']">Log Out</ion-button>
+       </ion-buttons>
+      </nav>
+    </header>
+  
+    <ion-card style="height: 470px; width:1000px; position: absolute; margin-top:24%;background:#111236 ;">
+      <div id="h3">Find the best flight for the right price</div>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:6%">Fullname</ion-label>
+      <ion-label style="color: white; margin-top: 18.3%; position: absolute; left:6%">Age</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:48.2%">Address</ion-label>
+      <ion-label style="color: white; margin-top: 18.3%; position: absolute; left:48.2%">BirtDate</ion-label>
+      <ion-card style="position: absolute;left:50px;margin-top: 10%; width: 300px;">
+      <ion-item>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="passName" placeholder="fullname" ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 472px;margin-top: 10%; width: 300px;">
+      <ion-item>
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="passAddress" placeholder="address" ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left:50px;margin-top: 20%; width: 300px; border-left-width: 1px solid black;">
+      <ion-item>
+        <ion-icon name="ellipse-outline" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="passAge" placeholder="age" ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 472px;margin-top: 20%; width: 300px;">
+      <ion-item>
+        <ion-icon name="balloon-outline" slot="start"></ion-icon>
+        <ion-datetime [(ngModel)]="passBirthdate" displayFormat="D MMM YYYY"></ion-datetime>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left:50px;margin-top: 30%; width: 300px; border-left-width: 1px solid black;">
+      <ion-item>
+        <ion-icon name="call-outline" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="passNumber" placeholder="contact #" ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 472px;margin-top: 30%; width: 300px;">
+      <ion-item>
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="passEmail" placeholder="email" ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-button style="position: absolute; left: 76.5%; margin-top: 37%;" color="dark" [routerLink]="['/signup']">
+      Back</ion-button>
+    <ion-button style="position: absolute; left: 84%; margin-top: 37%;" color="dark" (click)="addflight4()">
+      BookFlight
+    </ion-button>
+    
+  </ion-card>
+    </div>
+    <div class="container">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/passenger.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href=""><h2>Passengers</h2></a>
+                    </div>
+                </div>
+    </div>
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/work.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href=""><h2>Work With Us</h2></a>
+                    </div>
+                </div>
+    </div>
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/pilot.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href="#"><h2>Pilots</h2></a>
+                    </div>
+                </div>
+    </div>
+    </div>
+  </ion-content>

@@ -1,20 +1,140 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<ion-content>
+  <div class="header">
+    <header>
+      <div id="h1"><b>AV</b>ION<ion-icon name="airplane"></ion-icon></div>
+      <nav>
+          <ion-buttons>
+            <ion-button [routerLink]="['/home']">Home</ion-button>
+          </ion-buttons>
+          <ion-buttons>
+            <ion-button [routerLink]="['/receipt']">Flight Receipt</ion-button>
+          </ion-buttons>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-buttons>
+            <ion-button [routerLink]="['/']">Log Out</ion-button>
+          </ion-buttons>
+      </nav>
+    </header>
+  
+    <ion-card let style="height: 280px; width:1000px; position: absolute; margin-top:10%;background:#111236 ;">
+      <div id="h3">Find the best flight for the right price</div>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:10px">Where from?</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:26%">Where to?</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:51.2%">Departure</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:68.5%">Arrival</ion-label>
+      <ion-card style="position: absolute;margin-top: 10%; width: 250px;">
+      <ion-item>
+        <ion-icon name="ellipse-outline" slot="start"></ion-icon>
+        <ion-select [(ngModel)]="passFrom">
+          <ion-select-option value="Zamboanga Int. Airport">Zamboanga Int. Airport</ion-select-option>
+            <ion-select-option value="Cebu(Mactan-Cebu Int. Airport)">Cebu(Mactan-Cebu Int. Airport)</ion-select-option>
+            <ion-select-option value="Calbayog Airport">Calbayog Airport</ion-select-option>
+            <ion-select-option value="D.Z. Romualdez Airport">D.Z. Romualdez Airport</ion-select-option>
+            <ion-select-option value="Puerto Princesa Int. Airport">Puerto Princesa Int. Airport</ion-select-option>
+            <ion-select-option value="Ninoy Aquino Int. Airport">Ninoy Aquino Int. Airport</ion-select-option>
+            <ion-select-option value="Francisco Bangoy Int. Airport">Francisco Bangoy Int. Airport</ion-select-option>
+            <ion-select-option value="Clark Int. Airport">Clark Int. Airport</ion-select-option>
+            <ion-select-option value="Legazpi Airport">Legazpi Airport</ion-select-option>
+            <ion-select-option value="Laoag Int. Airport">Laoag Int. Airport</ion-select-option>
+            <ion-select-option value="Cagayan North Int. Airport">Cagayan North Int. Airport</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 250px;margin-top: 10%; width: 250px;">
+      <ion-item>
+        <ion-icon name="location-outline" slot="start"></ion-icon>
+        <ion-select [(ngModel)]="passTo">
+          <ion-select [(ngModel)]="passFrom">
+            <ion-select-option value="Zamboanga Int. Airport">Zamboanga Int. Airport</ion-select-option>
+            <ion-select-option value="Cebu(Mactan-Cebu Int. Airport)">Cebu(Mactan-Cebu Int. Airport)</ion-select-option>
+            <ion-select-option value="Calbayog Airport">Calbayog Airport</ion-select-option>
+            <ion-select-option value="D.Z. Romualdez Airport">D.Z. Romualdez Airport</ion-select-option>
+            <ion-select-option value="Puerto Princesa Int. Airport">Puerto Princesa Int. Airport</ion-select-option>
+            <ion-select-option value="Ninoy Aquino Int. Airport">Ninoy Aquino Int. Airport</ion-select-option>
+            <ion-select-option value="Francisco Bangoy Int. Airport">Francisco Bangoy Int. Airport</ion-select-option>
+            <ion-select-option value="Clark Int. Airport">Clark Int. Airport</ion-select-option>
+            <ion-select-option value="Legazpi Airport">Legazpi Airport</ion-select-option>
+            <ion-select-option value="Laoag Int. Airport">Laoag Int. Airport</ion-select-option>
+            <ion-select-option value="Cagayan North Int. Airport">Cagayan North Int. Airport</ion-select-option>
+          </ion-select>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 500px;margin-top: 10%; width: 172.8px; border-left-width: 1px solid black;">
+      <ion-item>
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        <ion-datetime [(ngModel)]="passDeparture" displayFormat="D MMM YYYY"></ion-datetime>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 672px;margin-top: 10%; width: 172.8px;">
+      <ion-item>
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        <ion-datetime [(ngModel)]="passArrival" displayFormat="D MMM YYYY"></ion-datetime>
+      </ion-item>
+    </ion-card>
+    <ion-button style="position: absolute; left: 85%; margin-top: 18%;" color="dark" (click)="addflight1()">
+      Next
+    </ion-button>
+    
+  </ion-card>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/passenger.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href=""><h2>Passengers</h2></a>
+                    </div>
+                </div>
+    </div>
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/work.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href=""><h2>Work With Us</h2></a>
+                    </div>
+                </div>
+    </div>
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/pilot.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href="#"><h2>Pilots</h2></a>
+                    </div>
+                </div>
+    </div>
+    </div>
+  </ion-content>

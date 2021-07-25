@@ -1,0 +1,126 @@
+header{
+    height: 50px;
+    background:cadetblue;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+#h1{
+    font-size:1em;
+    letter-spacing: 10px;
+    font-weight: lighter;
+    padding-left: 10px;
+    transform-origin: left;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+  ion-buttons{
+    height: 50px;
+   display: inline-block;
+   padding: 0 10px;
+   font-size: 1.3em;
+   color:#262626;
+   text-decoration: none;
+   line-height: 50px;
+   margin: 0 15px;
+   margin-top: 10px;
+   font-weight: lighter;
+}
+
+header nav{
+    position: absolute;
+    left:18%;
+    transform: translate(+30%);
+}
+h1{
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 0;
+  }
+  .header{
+    width: 100%;
+    padding-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:cadetblue;
+    border-bottom-right-radius: 50%;
+  }
+  .container{
+    width: 1300px;
+    min-height: 300px;
+    background: #fff;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  .container .box .imgbox{
+    position: relative;
+    overflow: hidden;
+  }
+  .container .box .imgbox img{
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 2s; 
+  }
+  .container .box:hover .imgbox img{
+    transform: scale(1.2);
+  }
+  .container .box .details{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
+  .container .box .details .content{
+    position: absolute;
+    top:40%;
+    padding: 15px;
+  }
+  .container .box .details .content h2{
+    margin:0;
+    padding:0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
+  .container .box .details .content:hover h2{
+  color: #ff9000
+  }
+a{
+    text-decoration: none;
+    color:teal;
+}
+a:hover{
+    color:orange;
+}
+ion-item{
+    border:1px solid white;
+}
+ion-item:hover{
+    border:1px solid darkslateblue;
+}
+#h3{
+    font-size:1.5em;
+    letter-spacing: 10px;
+    padding-left: 15px;
+    text-align: center;
+    transform-origin: center; 
+    margin-top: 20px;
+    color: white;
+  }

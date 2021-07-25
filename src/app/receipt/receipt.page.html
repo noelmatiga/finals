@@ -1,0 +1,117 @@
+<ion-content>
+  <div class="header">
+    <header>
+      <div id="h1"><b>AV</b>ION<ion-icon name="airplane"></ion-icon></div>
+      <nav>
+          <ion-buttons>
+            <ion-button [routerLink]="['/home']">Home</ion-button>
+          </ion-buttons>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+          <ion-buttons>
+            <ion-button [routerLink]="['/']">Log Out</ion-button>
+          </ion-buttons>
+      </nav>
+    </header>
+  
+    <ion-card style="height: 500px; width:1000px; position: absolute; margin-top:25%;
+                    background:#111236 ; overflow-y: scroll;">
+      <ion-card *ngFor="let pass of booking"
+      style="background:transparent; border-top: 1px solid orange;border-left: 1px solid orange;
+       height: 150px;">
+       <div id="h3">AVION<ion-icon name="airplane"></ion-icon></div>
+      <ion-card-header>
+        <ion-card-content style="position: absolute;">
+          <ion-label>Name:{{pass.value.name}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 0;">
+          <ion-label>Age:{{pass.value.age}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 20px;">
+          <ion-label>Address:{{pass.value.address}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 20px;">
+          <ion-label>Birthdate:{{pass.value.birthdate}}</ion-label>  
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 40px;"> 
+          <ion-label>Contact #:{{pass.value.number}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 40px;">
+          <ion-label>Email:{{pass.value.email}}</ion-label>
+        </ion-card-content>
+          </ion-card-header>
+    </ion-card>
+    <ion-card *ngFor="let pass of booking; let index = index" style="background:transparent; border-bottom: 1px solid orange;border-right: 1px solid orange;
+     height:255px; margin-top:0;">
+      <ion-card-header>
+        <ion-card-content style="position: absolute;">
+          <ion-label>From:{{pass.value.from}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 0;">
+          <ion-label>To:{{pass.value.to}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 22px;">
+          <ion-label>Arrival:{{pass.value.arrive}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 22px;">
+          <ion-label>Departure:{{pass.value.departure}}</ion-label>  
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 4.5%;"> 
+          <ion-label>Type of Travelers:{{pass.value.typeoftravelers}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 4.5%;">
+          <ion-label>No. of Travelers:{{pass.value.numoftravelers}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 6.5%;">
+          <ion-label>Type of Travel:{{pass.value.typeoftravel}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 6.5%;">
+          <ion-label>Cabin Class:{{pass.value.class}}</ion-label>  
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 8.5%;"> 
+          <ion-label>Airline:{{pass.value.airline}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 8.5%;">
+          <ion-label>Country: Philippines</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position:absolute;margin-top: 10.4%;"> 
+          <ion-label>Payment Method:{{pass.value.paymentl}}</ion-label>
+        </ion-card-content>
+        <ion-card-content style="position: absolute; left: 40%; margin-top: 10.4%;">
+          <ion-label>Price:{{pass.value.price}}</ion-label>
+        </ion-card-content>
+      </ion-card-header>
+      <ion-row>
+        <ion-item style="margin-left:90px; margin-top: 150px;"color="dark">
+          <ion-icon name="share-outline"></ion-icon>
+          <P>Share</P>
+        </ion-item>
+        <ion-item button (click)="update(pass)" style="margin-left:50px;
+        margin-top: 150px;" color="tertiary">
+          <ion-icon name="checkmark-done-outline"></ion-icon>
+          <P>Update</P>
+        </ion-item>
+        <ion-item button (click)="deleteFlight(pass.key)" style="margin-left:50px;
+        margin-top: 150px;"color="danger">
+          <ion-icon name="trash-outline"></ion-icon>
+          <P>Cancel</P>
+        </ion-item>
+      </ion-row>
+    </ion-card>
+    </ion-card>
+    </div>
+  </ion-content>

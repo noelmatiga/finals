@@ -1,0 +1,31 @@
+#hero{
+    background-color:cadetblue;
+    height: 100%;
+  }
+ion-item{
+    height: 55px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
+    --highlight-height: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 5%;
+    background: transparent;
+}
+h1{
+    font-weight: 700;
+    font-size: 26px;
+    color: #010100;
+    margin-bottom: 5%;
+    text-align: center;
+}
+ion-icon{
+    padding-right: 6px;
+    font-size: 18px;
+}
+ion-input{
+    color: #647890;
+}
+ion-input:hover{
+    color: #1248A0;
+}
+

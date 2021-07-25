@@ -1,0 +1,129 @@
+<ion-content>
+  <div class="header">
+    <header>
+      <div id="h1"><b>AV</b>ION<ion-icon name="airplane"></ion-icon></div>
+      <nav>
+        <ion-buttons>
+         <ion-button [routerLink]="['/home']">Home</ion-button>
+       </ion-buttons>
+       <ion-buttons>
+         <ion-button [routerLink]="['/receipt']">Flight Receipt</ion-button>
+       </ion-buttons>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;
+       <ion-buttons>
+         <ion-button [routerLink]="['/']">Log Out</ion-button>
+       </ion-buttons>
+      </nav>
+    </header>
+  
+    <ion-card style="height: 280px; width:1000px; position: absolute; margin-top:10%;background:#111236 ;">
+      <div id="h3">Find the best flight for the right price</div>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:10px">Payment Method</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:26%">Airline</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:51.2%">Country</ion-label>
+      <ion-label style="color: white; margin-top: 8.5%; position: absolute; left:68.5%">Price</ion-label>
+      <ion-card style="position: absolute;margin-top: 10%; width: 250px;">
+      <ion-item>
+        <ion-icon name="wallet-outline" slot="start"></ion-icon>
+        <ion-select [(ngModel)]="passPayment">
+          <ion-select-option value="cash">Cash</ion-select-option>
+          <ion-select-option value="online">Online (PayMaya/Gcash)</ion-select-option>
+          <ion-select-option value="atm">Card (BDO/LandBank)</ion-select-option>
+          <ion-select-option value="padala">Pera Padala (LBC/Mlhullier)</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 250px;margin-top: 10%; width: 250px;">
+      <ion-item>
+        <ion-icon name="airplane-outline" slot="start"></ion-icon>
+        <ion-select [(ngModel)]="passAirline">
+          <ion-select-option value="philair">Philippine Airline</ion-select-option>
+          <ion-select-option value="airasia">Air Aisa</ion-select-option>
+          <ion-select-option value="cebupacific">Cebu Pacific</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 500px;margin-top: 10%; width: 172.8px; border-left-width: 1px solid black;">
+      <ion-item>
+        <ion-icon name="flag-outline" slot="start"></ion-icon>
+        <ion-label>Philippines</ion-label>
+      </ion-item>
+    </ion-card>
+    <ion-card style="position: absolute;left: 672px;margin-top: 10%; width: 172.8px;">
+      <ion-item>
+        <ion-icon name="cash-outline" slot="start"></ion-icon>
+        <ion-select [(ngModel)]="passPrice">
+          <ion-select-option value="70$">3, 745.00</ion-select-option>
+          <ion-select-option value="100$">5, 350.00</ion-select-option>
+          <ion-select-option value="150$">8, 025.00</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+    <ion-button style="position: absolute; left: 77.5%; margin-top: 18%;" color="dark" [routerLink]="['/login']">
+      Back</ion-button>
+    <ion-button style="position: absolute; left: 85%; margin-top: 18%;" color="dark" (click)="addflight3()">
+      Next
+    </ion-button>
+    
+  </ion-card>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/passenger.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href=""><h2>Passengers</h2></a>
+                    </div>
+                </div>
+    </div>
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/work.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href=""><h2>Work With Us</h2></a>
+                    </div>
+                </div>
+    </div>
+    <div class="box">
+      <div class="imgbox">
+            <img src="assets/images/pilot.jpg">
+        </div>
+        <div class="details">
+                    <div class="content">
+                        <a href="#"><h2>Pilots</h2></a>
+                    </div>
+                </div>
+    </div>
+    </div>
+  </ion-content>
